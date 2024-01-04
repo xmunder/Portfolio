@@ -1,0 +1,49 @@
+---
+import Aside from "../components/Aside.astro";
+import NavBar from "../components/NavBar.astro";
+import { ViewTransitions } from "astro:transitions";
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cristian Gómez | Portfolio Web" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/code.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="bg-smoky-black text-white-2">
+
+    <main class="hidden max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:gap-6 max-lg:my-8 max-lg:mx-[5%] lg:flex lg:justify-center lg:items-stretch lg:gap-6 lg:my-16 lg:mx-[5%]">
+      <Aside />
+      <section
+        class="bg-eerie-black-2 h-full w-full flex flex-wrap relative p-[30px] flex-row border-[1.25px] border-jet rounded-3xl">
+        <NavBar />
+        <slot />
+        <ViewTransitions />
+      </section>
+    </main>
+
+    <style is:global>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      button {
+        color: hsl(0, 0%, 84%);
+      }
+    </style>
+  </body>
+</html>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>

@@ -1,0 +1,132 @@
+---
+import MoreInfo from "./MoreInfo.astro";
+---
+
+<aside
+  class="hidden lg:bg-eerie-black-2 lg:top-[60px] lg:max-h-fit lg:h-full lg:w-fit lg:p-8 lg:flex lg:flex-col lg:items-center lg:border-jet lg:border-[1.25px] lg:z-[1] lg:sticky lg:rounded-3xl">
+  <img
+    class="w-36 h-36 bg-onyx border-jet border-[1.25px] p-4 m-2 rounded-3xl"
+    src="/assets/img/cristianpic.png"
+    alt="Cristian Avatar"
+  />
+  <h1 class="text-[26px] text-white-2 text-quaternary">Cristian Gómez</h1>
+  <span
+    class="bg-onyx text-white-1 text-[12px] font-light my-2 px-2.5 py-0.5 rounded-full"
+    >Electronic Eng | Web Developer</span
+  >
+  <div
+    class="flex flex-row gap-4 pt-2 pb-3 w-full justify-center border-b-1.25 border-tertiaty">
+    <a
+      href="http://github.com/xmunder"
+      target="_blank"
+      rel="noopener noreferrer">
+      <img src="/assets/icons/github.svg" alt="Github Icon" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/cristian-camilo-gomez-fernandez/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <img src="/assets/icons/linkedin.svg" alt="LinKeDin Icon" />
+    </a>
+    <a
+      href="https://www.instagram.com/cristiancamilo_gomez22/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <img src="/assets/icons/instagram.svg" alt="Instagram Icon" />
+    </a>
+  </div>
+  <div class="flex flex-col items-start w-full">
+    <MoreInfo
+      isLinked="true"
+      url_icon="/assets/icons/email.svg"
+      content="gomezcristian676@gmail.com"
+      title="EMAIL"
+      alt="Email Icon"
+    />
+    <MoreInfo
+      isLinked="false"
+      url_icon="/assets/icons/birthday.svg"
+      content="November 5, 2002"
+      title="BIRTHDAY"
+      alt="Cake Icon"
+    />
+    <MoreInfo
+      isLinked="false"
+      url_icon="/assets/icons/location.svg"
+      content="Neiva, Colombia"
+      title="LOCATION"
+      alt="Location Icon"
+    />
+  </div>
+</aside>
+
+
+<aside transition:persist id="accordion-collapse" data-accordion="collapse" class="hidden max-lg:flex max-lg:flex-col max-lg: bg-eerie-black-2 max-lg:top-[60px] max-lg:max-h-fit max-lg:h-full max-lg:w-full max-lg:p-2 max-lg:border-jet max-lg:border-[1.25px] max-lg:rounded-3xl max-lg:mb-4">
+
+    <div class="flex flex-row justify-between bg-transparent">
+        <img
+        class="w-20 h-20 bg-onyx border-jet border-[1.25px] p-1 m-2 rounded-3xl"
+        src="/assets/img/cristianpic.png"
+        alt="Cristian Avatar"
+        />
+        <div class="flex flex-col w-full ml-2">
+            <h1 class="text-[16px] mt-1 text-white-2 text-quaternary">Cristian Gómez</h1>
+            <div
+            class="flex flex-row gap-2 w-full mt-1">
+            <a
+              href="http://github.com/xmunder"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img class="w-4 h-4" src="/assets/icons/github.svg" alt="Github Icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/cristian-camilo-gomez-fernandez/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img class="w-4 h-4" src="/assets/icons/linkedin.svg" alt="LinKeDin Icon" />
+            </a>
+            <a
+              href="https://www.instagram.com/cristiancamilo_gomez22/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img class="w-4 h-4" src="/assets/icons/instagram.svg" alt="Instagram Icon" />
+            </a>
+          </div>
+            <span
+              class="bg-onyx text-white-1 text-[10px] font-light mt-1 px-2 py-2 w-fit rounded-[5px]"
+              >Electronic Eng | Web Developer</span
+            >
+        </div>
+        
+        <svg id="accordion-collapse-heading-1" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1" data-accordion-icon class="w-4 h-4 rotate-180 mr-3 bg-transparent" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 10 6">
+            <path stroke="hsl(0, 0%, 100%)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+        </svg>
+    </div>
+
+    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+        <div class="p-2 pt-0 border-t-[1px] border-jet">
+          <MoreInfo
+            isLinked="true"
+            url_icon="/assets/icons/email.svg"
+            content="gomezcristian676@gmail.com"
+            title="EMAIL"
+            alt="Email Icon"
+          />
+          <MoreInfo
+            isLinked="false"
+            url_icon="/assets/icons/birthday.svg"
+            content="November 5, 2002"
+            title="BIRTHDAY"
+            alt="Cake Icon"
+          />
+          <MoreInfo
+            isLinked="false"
+            url_icon="/assets/icons/location.svg"
+            content="Neiva, Colombia"
+            title="LOCATION"
+            alt="Location Icon"
+          />
+        </div>
+    </div>
+ 
+</aside>

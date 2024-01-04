@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardsAbout from '../components/CardsAbout.astro'
+---
+
+<Layout title="Cristian Portfolio | About me">
+
+	<div class="about-me flex-col w-full" data-page="about me">
+		<h1 class="title pb-[20px] text-[32px] mb-[20px] mt-5 font-bold w-fit relative" id="headerMain">About me</h1>
+
+		<p class="font-light text-pretty text-sm text-light-gray-70">I am an advanced student of Electronic Engineering, characterized by my responsibility and ability to adapt. My fascination with programming has led me to venture into new technologies, focusing on web development. I started this journey into the world of Python, my favorite programming language, using the Reflex framework to create my portfolio. Likewise, I am expanding my knowledge in JavaScript and React.</p>
+
+		<h2 class="mt-6 text-xl">What I'm Doing</h2>
+
+		<div class="flex flex-col lg:grid lg:grid-cols-2 mt-4 gap-x-4">
+			<CardsAbout url_icon="/assets/icons/hardware.svg" alt="Hardware Icon" title="Hardware Setup" description="Professional design of electronic circuits, I worked with Arduino, Raspberry, FPGA, ESP32 and other modules." >
+			</CardsAbout>
+			<CardsAbout url_icon="/assets/icons/code.svg" alt="Code Icon" title="Web Development" description="High-quality development of sites at the professional level." >
+			</CardsAbout>
+		</div>
+
+		<div class="flex flex-col lg:grid lg:grid-cols-2 mt-4 gap-x-4">
+			<CardsAbout url_icon="/assets/icons/automation.svg" alt="IA Icon" title="Control & Automation" description="Professional design of control & automation systems with modern control techniques." >
+			</CardsAbout>
+			<CardsAbout url_icon="/assets/icons/iot.svg" alt="Hardware Icon" title="Hardware Setup" description="Professional design of electronic circuits, I worked with Arduino, Raspberry, FPGA, ESP32 and other modules." >
+			</CardsAbout>
+		</div>
+	</div>
+
+</Layout>
+
+<style>
+	.title::after {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		  left: 0;
+		width: 30px;
+		height: 3px;
+		background: hsl(45, 100%, 72%);
+		border-radius: 3px;
+	}
+</style>

@@ -1,0 +1,31 @@
+---
+const { content, title, isLinked, url_icon, alt } = Astro.props
+---
+
+<div class="flex flex-col ">
+{ isLinked === "true" ? 
+    <div class="flex flex-row justify-start mt-4 w-full">
+        <div class="flex flex-col mr-4 bg-onyx border-[1.25px] border-jet  h-10 w-10 rounded-xl items-center justify-center">
+            <a href="mailto:'{content}'">
+                <img class="h-4 w-4" src={url_icon} alt={alt}>
+            </a>
+        </div>
+        <div class="flex flex-col text-xs">
+            <h3 class="text-quaternary/80">{title}</h3>
+            <a href="mailto:{content}">
+                <p class="font-light text-light-gray">{content}</p>
+            </a>
+        </div>
+    </div>
+    :
+    <div class="flex flex-row justify-start mt-4 w-full">
+        <div class="flex flex-col mr-4 bg- bg-onyx border-[1.25px] border-jet h-10 w-10 rounded-xl items-center justify-center">
+            <img class="h-4 w-4" src={url_icon} alt={alt}>
+        </div>
+        <div class="flex flex-col text-xs text-light-gray">
+            <h3 class="text-quaternary/80">{title}</h3>
+            <p class="font-light">{content}</p>
+        </div>
+    </div>
+}
+</div>
